@@ -11,4 +11,10 @@ export class AppController {
   getHello() {
     return this.appService.rootPathMsg();
   }
+
+
+   @Get(`/test`)
+  testTest() {
+    return {"msg":"testing route"};
+  }
 }
