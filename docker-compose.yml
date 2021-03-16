@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  generic-api:
+    container_name: generic-api
+    build: 
+      context: './'
+      dockerfile: ./docker/api.dockerfile
+    environment:
+      NODE_ENV: development
+      api_version: "1.0.0"
+      SERVER_PORT: 3001
+    expose:
+      - '3001'
+    ports:
+      - '3001:3001'
+  
+
+
